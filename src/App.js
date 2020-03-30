@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+
+import LandingPage from './containers/LandingPage/LandingPage';
+import PortfolioPage from './containers/PortfolioPage/PortfolioPage';
+import CopyrightNotice from './components/CopyrightNotice/CopyrightNotice';
+import Page from './containers/Page/Page';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <Switch>
+          <Route path='/portfolio/:slug' component={PortfolioPage} />
+          <Route path='/info' component={Page} />
+          <Route path='/contact' component={Page} />
+          <Route path='/' exact component={LandingPage} />
+        </Switch>
+        <CopyrightNotice />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,29 @@
+.hamburger {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  background-color: $ivory;
+  @include media('<=LGphone') {
+    width: 25px;
+  }
+
+  span {
+    background-color: $darkGrey;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 10px;
+    left: 0;
+
+    @include media('<=LGphone') {
+      height: 1px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      right: 0;
+    }
+  }
+}

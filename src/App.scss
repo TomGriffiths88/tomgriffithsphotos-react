@@ -1,0 +1,43 @@
+@import './styles/utilities/mediaQueries.scss';
+
+//VARIABLES
+$ivory: #f7f7f7;
+$white: #ffffff;
+$black: #191919;
+$mediumGrey: #777777;
+$darkGrey: #333333;
+
+//BORDER
+$borderWidth: 40px;
+
+.App {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: $ivory;
+  border: $borderWidth solid $white;
+  outline-offset: -$borderWidth;
+
+  @include media('<=LGphone') {
+    border: none;
+    outline-offset: unset;
+    padding: 20px;
+  }
+
+  @media (max-height: 425px) {
+    border: 0px solid $white;
+    outline-offset: 0px;
+    padding: 20px;
+  }
+}
+
+@import './styles/components/landingPage.scss';
+@import './styles/components/Navigation.scss';
+@import './styles/components/gallery.scss';
+@import './styles/components/portfolioPage.scss';
+@import './styles/components/copyrightNotice.scss';
+@import './styles/components/hamburger.scss';
+@import './styles/components/page.scss';
+@import './styles/components/preLoader.scss';

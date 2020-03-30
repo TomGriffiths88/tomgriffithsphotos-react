@@ -1,0 +1,24 @@
+.copyrightNotice {
+  position: absolute;
+  width: calc(100%);
+  text-align: center;
+  bottom: -1rem;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  padding-top: 0.5rem;
+  color: $mediumGrey;
+
+  @include media('<=LGphone') {
+    bottom: 2rem;
+    width: calc(100% - 20px);
+    font-size: 1rem;
+  }
+
+  @media (max-width: 900px) and (orientation: landscape) {
+    bottom: 2rem;
+    width: calc(100% - 20px);
+    font-size: 1rem;
+  }
+}
