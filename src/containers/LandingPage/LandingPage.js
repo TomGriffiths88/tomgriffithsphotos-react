@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import gsap from 'gsap';
 import axios from 'axios';
 
-import Background from '../../assets/bg.jpg';
 import { pages as pagesRoute } from '../../api/apiRoutes';
 import PreLoader from '../../ui/PreLoader/PreLoader';
 
